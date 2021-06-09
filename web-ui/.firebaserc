@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tryfb-4eb43": {
+      "hosting": {
+        "web-ui": [
+          "tryfb-4eb43"
+        ]
+      }
+    }
+  }
+}
