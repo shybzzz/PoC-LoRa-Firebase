@@ -16,8 +16,6 @@ export class AuthService {
     private angularFireStore: AngularFirestore,
     private ngZone: NgZone
   ) {
-    /* Saving user data in localstorage when
-    logged in and setting up null when logged out */
     this.angularFireAuth.authState.subscribe((user) => {
       if (user) {
         localStorage.setItem('user', JSON.stringify(user));
