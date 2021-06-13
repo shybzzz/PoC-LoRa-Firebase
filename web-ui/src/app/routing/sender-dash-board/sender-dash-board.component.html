@@ -1,2 +1,9 @@
 <p>sender-dash-board works!</p>
-{{ state | async | json }}
+<div>{{ state | async | json }}</div>
+<div>
+  <input
+    type="checkbox"
+    (change)="toggle($event)"
+    [checked]="(state | async)?.value"
+  />
+</div>

@@ -20,4 +20,8 @@ export class SenderDashBoardComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  toggle(event: any) {
+    this.stateDoc.update({ value: event?.target?.checked });
+  }
 }
