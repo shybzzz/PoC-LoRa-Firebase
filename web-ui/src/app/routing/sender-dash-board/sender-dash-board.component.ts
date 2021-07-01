@@ -15,13 +15,13 @@ export class SenderDashBoardComponent implements OnInit {
   state: Observable<any>;
 
   constructor(private angularFirestore: AngularFirestore) {
-    this.stateDoc = this.angularFirestore.doc<any>('/try_collection/students');
+    this.stateDoc = this.angularFirestore.doc<any>('/lora-senders/poc');
     this.state = this.stateDoc.valueChanges();
   }
 
   ngOnInit(): void {}
 
   toggle(event: any) {
-    this.stateDoc.update({ value: event?.target?.checked });
+    this.stateDoc.update({ on: event?.target?.checked });
   }
 }
